@@ -1,0 +1,25 @@
+
+Font Awesome
+className='fas fa-redo fa-2x boton'
+
+Component bootstrap
+className={'rounded-pill border border-success'}
+
+Conditional ClassName
+className={tiempoRestante.minutos < 1 ? 'text-danger' : ''}
+
+Passing a state Property as Arg and calling
+onClickUp={() => this.incrementDuration('breakDuration')
+...
+this.setState({ [estado]: this.state[estado] + 10 });
+
+Audio Object
+audio: new Audio('./alarma.mp3')
+
+ID as arg
+<TimerSetter timerName='break' />
+...
+<h3 id={`${props.timerName}-length`}> {props.timerDuration}</h3>
+
+Conditional Style from Props arg
+style={props.gridLocation !== undefined ?{gridArea: props.gridLocation}:{}}

@@ -1,0 +1,10 @@
+function titleCase(str) {
+  const reg= /^[a-z]/;
+  str = str.toLowerCase().split(' ').map((item)=>{
+    return item.replace(reg, item[0].toUpperCase());
+    }).join(' ');
+
+  return str;
+}
+
+console.log(titleCase("I'm a little tea pot"));

@@ -1,0 +1,32 @@
+const isNumber = (num) => {
+return typeof(num)=='number' ? true: false;}
+
+
+function addTogether(x, y) {
+  let b;
+    if(!isNumber(x)) return b;
+
+  if(arguments.length > 1){
+      if(!isNumber(y)) return b;
+        return x + y;
+  }
+  else 
+    return function(y) {
+      if(!isNumber(y)) return b;
+      return x + y;
+    }
+  
+}
+
+
+let a = addTogether(2);
+a = a(2);
+console.log(a);
+
+console.log(addTogether(2, "3"))
+
+
+
+
+
+ 

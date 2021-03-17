@@ -1,0 +1,18 @@
+function destroyer(arr) {
+  let newArr = arr.slice();;
+  var args = Array.prototype.slice.call(arguments);
+
+  for(let i = 1; i < args.length; i++)
+    while(newArr.includes(args[i]))
+      newArr = remove(newArr.indexOf(args[i]));
+
+  function remove(num){
+    let myArr = newArr.slice(0, num);
+    myArr.push(...newArr.slice(num+1));
+    return myArr;
+  }
+
+  return newArr;
+}
+
+console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3));

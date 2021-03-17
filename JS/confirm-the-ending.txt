@@ -1,0 +1,16 @@
+function confirmEnding(str, target) {
+  let strAux = [...str.slice("")];
+  let targetAux = [...target.slice("")];
+  let valor = true;
+
+  console.log(strAux);
+  console.log(targetAux);
+  
+  for(let i = 0; i < target.length; i++)
+    if(strAux[str.length -1 -i]!=targetAux[target.length -1 -i])
+      valor = false;
+
+  return valor;
+}
+
+confirmEnding("Bastian", "n");

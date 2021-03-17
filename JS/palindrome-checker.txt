@@ -1,0 +1,16 @@
+function palindrome(str) {
+  const myReg = /[\W/_]/g;
+  let myStr = str.toLowerCase();
+  myStr = myStr.replace(myReg, '');
+
+  for(let i = 0; i < (myStr.length/2)+1 ; i++)
+    if(myStr[i]!=myStr[myStr.length-i-1])
+      return false;
+
+  console.log(myStr);
+  return true;
+}
+
+
+
+console.log(palindrome("almosto mla"));

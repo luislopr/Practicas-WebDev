@@ -1,0 +1,12 @@
+function dropElements(arr, func) {
+  console.log(func(arr[0]));
+  
+  while(!func(arr[0])){
+    arr.shift();
+    console.log(func(arr[0]));
+  }
+  return arr;
+}
+
+console.log(dropElements([1, 2, 3, 4], 
+function(n) {return n >= 3;}));

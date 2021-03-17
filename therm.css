@@ -1,0 +1,40 @@
+
+@import url(https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css);
+
+
+.container {
+  width: 98%;
+  background-color: blue;
+  height: 50vh;
+  text-align: center;
+  color: azure;
+}
+
+.thermomether {
+  height: 3vh;
+  width: 250px;
+  margin: 10px;
+  margin-top: 45px;
+  position: relative;
+  right: 125px;
+  transform: rotate(-90deg);
+  transform-origin: right;
+  /*
+
+  .verticalrotate {
+  transform: rotate(-90deg);
+  transform-origin: right top;
+  -ms-transform: rotate(-90deg);
+  -ms-transform-origin:right top;
+  -webkit-transform: rotate(-90deg);
+  -webkit-transform-origin:right top
+*/
+}
+
+.temps {
+  background-color: rgba(7, 7, 63, 0.747);
+  height: 75%;
+  width: 90%;
+  margin: auto;
+  display: flex;
+}

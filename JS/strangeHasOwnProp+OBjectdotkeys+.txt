@@ -1,0 +1,26 @@
+function whatIsInAName(collection, source) {
+  var arr = [];
+  // Only change code below this line
+  const keys = Object.keys(source);
+
+  
+
+  for(let i = 0; i < collection.length; i++){
+   if(collection[i].hasOwnProperty(keys[0]))
+   if(collection[i][keys[0]]==source[keys[0]])
+    if(keys.length>1){
+      for(let j = 1; j < keys.length; j++){
+        if(collection[i][keys[j]]==source[keys[j]]){
+          if(j==keys.length-1)
+            arr.push(collection[i]);
+        }
+        else break;
+    }
+  }else
+      arr.push(collection[i]);
+  }
+  // Only change code above this line
+  return arr;
+}
+
+console.log(whatIsInAName([{ "apple": 1, "bat": 2 }, { "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "bat": 2 }));
